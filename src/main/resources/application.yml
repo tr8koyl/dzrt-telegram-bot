@@ -1,0 +1,47 @@
+server.port: 8081
+
+bot_info:
+  token: "7274804788:AAHNUjwKKYw9RoZ4ULa8J_TP0umz5pQ0Z_g"
+  username: "testdzrtbot"
+  adminId: 59566445
+#  token: "6954677787:AAFvNjORwrOZ8ZuuGPvrPatzTb1Q11hMIdU"
+#  username: "mohajer13bot"
+#  adminId: 59566445
+#  adminId: 749852523
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:./dzrt_db
+    driverClassName: org.h2.Driver
+    username: dzrt
+    password: 123654
+    hikari:
+      maximum-pool-size: 30
+      minimum-idle: 10
+      idle-timeout: 600000
+      connection-timeout: 30000
+      max-lifetime: 1800000
+  h2:
+    console:
+      enabled: true
+  jpa:
+    generate-ddl: true
+    database-platform: org.hibernate.dialect.H2Dialect
+    properties:
+      hibernate:
+        dialec: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+    hibernate:
+      ddl-auto: create-drop
+
+logging:
+  level:
+    root: info
+    my.app: info
+    org:
+      springframework:
+        web: info
+      hibernate: info
+  file:
+    path: '.'
+    name: ${logging.file.path}/dzrtlog.log
