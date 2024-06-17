@@ -6,16 +6,41 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.jvnet.hk2.annotations.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
+import project.dao.ProductDao;
+import project.dao.TokenDao;
 import project.domain.Product;
 import java.io.IOException;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
+@EnableScheduling
 @Log4j
-@Service
+@Component
 public class ScrapingService {
+
+    @Value("${bot_info.adminId}")
+    private Long adminId;
+
+    @Lazy
+    @Autowired
+    private SubscriptionService subscriptionService;
+
+    @Lazy
+    @Autowired
+    private TelegramBotService telegramBotService;
+
+    @Autowired
+    private TokenDao tokenDao;
+
+    @Autowired
+    private ProductDao productDao;
 
     public List<Product> getAllProducts() {
 
@@ -40,7 +65,70 @@ public class ScrapingService {
         return products;
     }
 
+    @Scheduled(fixedRate = 60000)
+    public void notifySubscribers() {
 
+        List<Product> newProducts = getAllProducts();
+        List<Product> oldProducts = productDao.findAll();
 
+        productDao.saveAll(newProducts);
+
+        if (oldProducts !=null) {
+
+            Map<String, Boolean> oldProductsMap = new HashMap<>();
+            List<Product> changedAvailability = new ArrayList<>();
+            List<Long> userIdList = tokenDao.allUserIdList();
+            userIdList.removeIf(Objects::isNull);
+
+            for (Product product : oldProducts) {
+                oldProductsMap.put(product.getName(), product.getAvailability());
+            }
+
+            if (newProducts != null){
+
+                for (Product product : newProducts) {
+
+                    Boolean oldStatus = oldProductsMap.get(product.getName());
+                    if (product.getAvailability() != null){
+                        if (oldStatus != null && !oldStatus && product.getAvailability()) {
+                            changedAvailability.add(product);
+                        }
+                    }
+                }
+
+            }
+
+            //todo remove hardcode
+            if (!userIdList.contains(adminId)) userIdList.add(adminId);
+            long rayan =749852523;
+            if (!userIdList.contains(rayan)) userIdList.add(rayan);
+
+            for (Long userId : userIdList) {
+                if (subscriptionService.isSubscriber(userId) || userId.equals(adminId)) {
+
+                    for (Product product : changedAvailability) {
+                        telegramBotService.sendTextMessage(String
+                                .format("منتج: %s ✅ متاح الآن ✅\nالرابط: %s "
+                                        , product.getName(), product.getLink()), userId);
+                    }
+                }
+            }
+
+            if (newProducts != null){
+
+                for (Product product : newProducts) {
+                    productDao.updateProductStatus(product);
+                }
+
+            }
+
+        } else {
+
+            if (newProducts != null){
+                productDao.saveAll(newProducts);
+            }
+        }
+
+    }
 
 }
