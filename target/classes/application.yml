@@ -1,0 +1,35 @@
+server.port: 8081
+
+bot_info:
+  token: "7274804788:AAHNUjwKKYw9RoZ4ULa8J_TP0umz5pQ0Z_g"
+  username: "testdzrtbot"
+  adminId: 59566445
+#  token: "6954677787:AAFvNjORwrOZ8ZuuGPvrPatzTb1Q11hMIdU"
+#  username: "mohajer13bot"
+#  adminId: 59566445
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/dzrt_db
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: dzrt
+    password: 123654
+  jpa:
+    properties:
+      hibernate:
+        dialec: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+    hibernate:
+      ddl-auto: create-drop
+
+logging:
+  level:
+    root: info
+    my.app: info
+    org:
+      springframework:
+        web: info
+      hibernate: info
+  file:
+    path: '.'
+    name: ${logging.file.path}/dzrtlog.log

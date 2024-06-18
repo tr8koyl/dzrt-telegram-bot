@@ -19,9 +19,6 @@ public class MainApplication {
     CommandLineRunner run(ScrapingService scrapingService) {
         return args -> {
 
-            System.out.println(scrapingService.getAllProducts());
-
-
         };
 
     }

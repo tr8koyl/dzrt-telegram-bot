@@ -4,22 +4,298 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d7bb72b-696f-451b-a6a1-84bf85bdcacb" name="Changes" comment="get all products list">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/dao/ProductDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/dao/TokenDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/service/SubscriptionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/service/TelegramBotService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="9d7bb72b-696f-451b-a6a1-84bf85bdcacb" name="Changes" comment="reform mantegh sahih bi error">
+      <change afterPath="$PROJECT_DIR$/dzrtlog.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/6be60f2aa1fc5dfa226e2f6404267ac8.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/80547bbecf108b8180547bbecf108b81haila__2810mg_29-view3_2_11zon_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/831979766ea0cfc91456a470fa233776.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/9fb4c4cfa114497c87293602d1422e9a.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/accordion.min(1).js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/accordion.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/adapter.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/add-to-wishlist.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/address-list.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/address.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/after-render.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/ageverification.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/ajax_layered.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/alert.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/aos.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/app.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/applepaybutton.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/arlogo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/arrays.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/async.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/authentication-popup.min(1).js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/authentication-popup.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/autocomplete.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/autoselect.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/bind-html.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/bindings.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/block-loader.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/block-submit-on-send.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/bootstrap.min(1).js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/bootstrap.min(2).js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/bootstrap.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/bound-nodes.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/button.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/buttons.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/captcha.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/captchaList.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/cart-item-renderer.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/catalog-add-to-cart-mixin.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/catalog-add-to-cart.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/checkboxradio.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/checkout-data-ext.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/checkout-data.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/checkoutcom_paypal_express.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/chosen.jquery.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/class.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/collapsible.min(1).js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/collapsible.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/collection.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/color-picker.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/common.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/compare.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/compat.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/config-loader.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/configurable-variation-qty.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/confirm.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/console-logger.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/console-output-handler.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/controlgroup.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/cookie-status.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/cookie-wrapper.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/cookies.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/core.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/custom.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/customer-addresses.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/customer-data-mixin.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/customer-data.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/customer.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/data-storage.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/data.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/dataPost.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/datepicker.min(1).js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/datepicker.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/decorate.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/defaultCaptcha-mixin.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/defaultCaptcha.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/dialog.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/disable-selection.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/dom-observer.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/domReady.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/draggable.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/dropdown.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/dropdowns.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/droppable.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/edgy_mint_6mg_vue03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/effect-blind.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/effect-bounce.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/effect-clip.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/effect-drop.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/effect-explode.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/effect-fade.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/effect-fold.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/effect-highlight.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/effect-pulsate.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/effect-scale.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/effect-shake.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/effect-size.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/effect-slide.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/effect-transfer.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/effect.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/element.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/engine.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/enlogo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/entry-factory.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/entry.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/escaper.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/events.min(1).js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/events.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/fadeVisible.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/focusable.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/form-key-provider.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/form-mini.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/form-reset-mixin.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/form.min(1).js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/form.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/formatter.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/full-screen-loader.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/garden_mint_6mg_vue03_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/highland_berries_6mg_vue03_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/i18n.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/icy_rush_10mg_vue03_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/ids-storage-compare.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/ids-storage.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/ie.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/image.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/intlTelInput.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/invalidation-processor.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/jarallax-video.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/jarallax-wrapper.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/jarallax.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/jg3w1wvkoe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/jquery-migrate.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/jquery-mixin.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/jquery-patch.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/jquery-var-for-color.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/jquery.color.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/jquery.metadata.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/jquery.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/jquery.parsequery.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/jquery.ui.touch-punch.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/jquery.validate.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/js.cookie.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/js.storage.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/key-codes.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/keyboard.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/keycode.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/knockout-es5.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/knockout-fast-foreach.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/knockout-repeat.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/knockout.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/labels.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/layout.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/lazyload.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/levels-pool.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/links.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/loadding.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/loader.min(1).js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/loader.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/local.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/logger-utils.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/logger.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/login.min(1).js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/login.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/loginCaptcha.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/mage-init.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/mage-translation-dictionary.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/mage.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/main.min(1).js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/main.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/matchMedia.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/menu.min(1).js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/menu.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/message-pool.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/messageList.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/messages.min(1).js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/messages.min(2).js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/messages.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/mfblogunveil.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/minicart-apple.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/minicart.min(1).js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/minicart.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/mint_fusion_6mg_vue03_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/misc.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/modal.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/moment.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/mouse.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/objects.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/observable_array.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/observable_source.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/optgroup.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/outer_click.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/page-cache.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/paypal-utilities.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/pickup-address-converter.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/player.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/plugin.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/position.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/price-box-mixin.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/price-box.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/price-utils.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/product-ids-resolver.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/product-ids.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/product-info-resolver.min(1).js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/product-info-resolver.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/product-info.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/progressbar.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/purple_mist_3mg_vue03-20230707.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/query-builder.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/quote-ext.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/quote.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/range.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/redirect-on-success.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/refresh.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/registry.min(1).js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/registry.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/renderer.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/require-cookie.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/resizable.min(1).js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/resizable.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/resolver.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/safe-active-element.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/safe-blur.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/samra__10mg_-view3_2_11zon_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/scope.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/scripts.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/scroll-parent.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/seaside_frost_10mg_vue03_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/section-config.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/selectable.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/selectmenu.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/sidebar.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/simple-checked.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/skipRefreshCaptcha.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/slick.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/slider.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/smart-keyboard-handler.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/sortable.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/spectrum.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/spicy_zest_3mg_vue03_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/spinner.min(1).js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/spinner.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/staticChecked.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/storage-manager.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/storage-service.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/storage-wrapper.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/storage.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/strings.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/styles-l.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/submit_layered.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/swatch-renderer-mixin.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/swatch-renderer.min(1).js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/swatch-renderer.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/tabbable.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/tabs.min(1).js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/tabs.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/tamra__6mg_-view3_1_11zon_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/template.min(1).js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/template.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/text.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/theme.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/timepicker.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/tinycolor.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/toolbar.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/tooltip.min(1).js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/tooltip.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/totals.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/translate.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/trim-input.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/types.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/ui-messages-mixin.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/underscore.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/unique-id.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/url.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/utilities.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/validation.min(1).js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/validation.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/version.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/video-background.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/vimeo-wrapper.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/website-rule.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/widget-initializer.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/widget.min(1).js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/widget.min(2).js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/widget.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/wrapper.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Shop_files/z-index.min.js.download" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/MainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/domain/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/domain/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/domain/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/domain/Token.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/domain/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/service/ScrapingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/service/ScrapingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +374,7 @@
       <option name="presentableId" value="Default" />
       <updated>1718660201552</updated>
       <workItem from="1718660203194" duration="5449000" />
-      <workItem from="1718665719296" duration="348000" />
+      <workItem from="1718665719296" duration="3552000" />
     </task>
     <task id="LOCAL-00001" summary="add ptoject">
       <created>1718660234452</created>
@@ -114,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718660606645</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="reform mantegh sahih bi error">
+      <created>1718666358928</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1718666358928</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +419,7 @@
     <MESSAGE value="add ptoject" />
     <MESSAGE value="get all products link" />
     <MESSAGE value="get all products list" />
-    <option name="LAST_COMMIT_MESSAGE" value="get all products list" />
+    <MESSAGE value="reform mantegh sahih bi error" />
+    <option name="LAST_COMMIT_MESSAGE" value="reform mantegh sahih bi error" />
   </component>
 </project>
