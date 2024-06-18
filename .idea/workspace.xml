@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d7bb72b-696f-451b-a6a1-84bf85bdcacb" name="Changes" comment="Mantegh sahih 100!">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a5f380d3-2c80-4e55-94e4-d59626eeb1ad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a5f380d3-2c80-4e55-94e4-d59626eeb1ad.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dzrtlog.log" beforeDir="false" afterPath="$PROJECT_DIR$/dzrtlog.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/service/ScrapingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/service/ScrapingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/service/SubscriptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/service/SubscriptionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/service/ScrapingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/service/ScrapingService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/service/SubscriptionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/service/SubscriptionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/service/TelegramBotService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/service/TelegramBotService.class" afterDir="false" />
-    </list>
+    <list default="true" id="9d7bb72b-696f-451b-a6a1-84bf85bdcacb" name="Changes" comment="Final 10000" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1718660201552</updated>
       <workItem from="1718660203194" duration="5449000" />
-      <workItem from="1718665719296" duration="8729000" />
+      <workItem from="1718665719296" duration="9116000" />
     </task>
     <task id="LOCAL-00001" summary="add ptoject">
       <created>1718660234452</created>
@@ -142,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718673443573</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Final 10000">
+      <created>1718675399123</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1718675399123</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +167,7 @@
     <MESSAGE value="Mantegh sahih" />
     <MESSAGE value="Mantegh sahih - reform codes" />
     <MESSAGE value="Mantegh sahih 100!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mantegh sahih 100!" />
+    <MESSAGE value="Final 10000" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final 10000" />
   </component>
 </project>

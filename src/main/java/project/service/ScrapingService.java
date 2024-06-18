@@ -20,13 +20,10 @@ public class ScrapingService {
 
     public List<Product> getAllProducts() {
 
-        File in = new File("C:\\Users\\mohajer13\\Desktop\\New folder (2)\\Shop.html");
-
         String allProductsUrl = "https://www.dzrt.com/en/our-products.html";
         List<Product> products = new ArrayList<>();
         try {
-            Document doc = Jsoup.parse(in, null);
-//            Document doc = Jsoup.connect(allProductsUrl).get();
+            Document doc = Jsoup.connect(allProductsUrl).get();
             Elements productList = doc.select("#layer-product-list > div.products.wrapper.grid.products-grid > ol > li");
             for (Element productElement : productList) {
                 String productName = productElement.select("div.visible-front > strong").text();
