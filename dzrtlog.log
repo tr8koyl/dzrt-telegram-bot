@@ -93,3 +93,106 @@
 2024-06-18T03:44:55.005+03:30  INFO 8252 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
 2024-06-18T03:44:55.716+03:30  INFO 8252 --- [main] project.MainApplication                  : Started MainApplication in 11.346 seconds (process running for 12.416)
 2024-06-18T03:47:10.447+03:30  INFO 8252 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18T03:47:21.136+03:30  INFO 10756 --- [main] project.MainApplication                  : Starting MainApplication using Java 17.0.9 with PID 10756 (D:\My Projecs\GitHub\dzrt-telegram-bot\target\classes started by mohajer13 in D:\My Projecs\GitHub\dzrt-telegram-bot)
+2024-06-18T03:47:21.139+03:30  INFO 10756 --- [main] project.MainApplication                  : No active profile set, falling back to 1 default profile: "default"
+2024-06-18T03:47:21.962+03:30  INFO 10756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-18T03:47:21.963+03:30  INFO 10756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-18T03:47:22.006+03:30  INFO 10756 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface project.dao.ProductDao; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-18T03:47:22.008+03:30  INFO 10756 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface project.dao.TokenDao; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-18T03:47:22.010+03:30  INFO 10756 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface project.dao.UserDao; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-18T03:47:22.011+03:30  INFO 10756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 0 JDBC repository interfaces.
+2024-06-18T03:47:22.024+03:30  INFO 10756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-18T03:47:22.024+03:30  INFO 10756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-18T03:47:22.075+03:30  INFO 10756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 3 JPA repository interfaces.
+2024-06-18T03:47:23.259+03:30  INFO 10756 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2024-06-18T03:47:23.272+03:30  INFO 10756 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-18T03:47:23.273+03:30  INFO 10756 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-06-18T03:47:23.435+03:30  INFO 10756 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-18T03:47:23.435+03:30  INFO 10756 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2238 ms
+2024-06-18T03:47:23.625+03:30  INFO 10756 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-18T03:47:23.690+03:30  INFO 10756 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-06-18T03:47:23.693+03:30  INFO 10756 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-06-18T03:47:24.024+03:30  INFO 10756 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-18T03:47:24.053+03:30  INFO 10756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-18T03:47:24.430+03:30  INFO 10756 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@48a46b0f
+2024-06-18T03:47:24.433+03:30  INFO 10756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-18T03:47:25.565+03:30  INFO 10756 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-18T03:47:29.798+03:30  INFO 10756 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18T03:47:29.903+03:30  INFO 10756 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final org.telegram.telegrambots.bots.DefaultBotOptions org.telegram.telegrambots.bots.DefaultAbsSender.getOptions()] because it is marked as final: Consider using interface-based JDK proxies instead!
+2024-06-18T03:47:30.244+03:30  INFO 10756 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-18T03:47:30.596+03:30  WARN 10756 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-18T03:47:31.127+03:30  INFO 10756 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2024-06-18T03:47:31.807+03:30  INFO 10756 --- [main] project.MainApplication                  : Started MainApplication in 11.458 seconds (process running for 13.144)
+2024-06-18T03:54:11.818+03:30  INFO 10756 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18T03:55:41.913+03:30  INFO 11364 --- [main] project.MainApplication                  : Starting MainApplication using Java 17.0.9 with PID 11364 (D:\My Projecs\GitHub\dzrt-telegram-bot\target\classes started by mohajer13 in D:\My Projecs\GitHub\dzrt-telegram-bot)
+2024-06-18T03:55:41.917+03:30  INFO 11364 --- [main] project.MainApplication                  : No active profile set, falling back to 1 default profile: "default"
+2024-06-18T03:55:42.733+03:30  INFO 11364 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-18T03:55:42.734+03:30  INFO 11364 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-18T03:55:42.773+03:30  INFO 11364 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface project.dao.ProductDao; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-18T03:55:42.776+03:30  INFO 11364 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface project.dao.TokenDao; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-18T03:55:42.779+03:30  INFO 11364 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface project.dao.UserDao; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-18T03:55:42.780+03:30  INFO 11364 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 0 JDBC repository interfaces.
+2024-06-18T03:55:42.793+03:30  INFO 11364 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-18T03:55:42.794+03:30  INFO 11364 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-18T03:55:42.833+03:30  INFO 11364 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 3 JPA repository interfaces.
+2024-06-18T03:55:43.449+03:30  INFO 11364 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2024-06-18T03:55:43.460+03:30  INFO 11364 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-18T03:55:43.461+03:30  INFO 11364 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-06-18T03:55:43.631+03:30  INFO 11364 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-18T03:55:43.632+03:30  INFO 11364 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1651 ms
+2024-06-18T03:55:43.844+03:30  INFO 11364 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-18T03:55:43.923+03:30  INFO 11364 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-06-18T03:55:43.927+03:30  INFO 11364 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-06-18T03:55:44.245+03:30  INFO 11364 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-18T03:55:44.276+03:30  INFO 11364 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-18T03:55:44.661+03:30  INFO 11364 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45e7bb79
+2024-06-18T03:55:44.664+03:30  INFO 11364 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-18T03:55:45.760+03:30  INFO 11364 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-18T03:55:49.853+03:30  INFO 11364 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18T03:55:49.943+03:30  INFO 11364 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final org.telegram.telegrambots.bots.DefaultBotOptions org.telegram.telegrambots.bots.DefaultAbsSender.getOptions()] because it is marked as final: Consider using interface-based JDK proxies instead!
+2024-06-18T03:55:50.335+03:30  INFO 11364 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-18T03:55:50.695+03:30  WARN 11364 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-18T03:55:51.312+03:30  INFO 11364 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2024-06-18T03:55:51.963+03:30  INFO 11364 --- [main] project.MainApplication                  : Started MainApplication in 10.734 seconds (process running for 11.802)
+2024-06-18T03:56:10.898+03:30 ERROR 11364 --- [testdzrtbot Telegram Executor] o.t.t.u.DefaultBotSession                : Cannot invoke "org.telegram.telegrambots.meta.api.objects.Message.getChatId()" because the return value of "org.telegram.telegrambots.meta.api.objects.Update.getMessage()" is null
+
+java.lang.NullPointerException: Cannot invoke "org.telegram.telegrambots.meta.api.objects.Message.getChatId()" because the return value of "org.telegram.telegrambots.meta.api.objects.Update.getMessage()" is null
+	at project.service.TelegramBotService.onUpdateReceived(TelegramBotService.java:50) ~[classes/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.8.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.8.0.jar:na]
+
+2024-06-18T03:58:36.767+03:30  INFO 11364 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18T03:58:38.944+03:30  INFO 11364 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-18T03:58:38.952+03:30  INFO 11364 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-18T03:58:48.736+03:30  INFO 10352 --- [main] project.MainApplication                  : Starting MainApplication using Java 17.0.9 with PID 10352 (D:\My Projecs\GitHub\dzrt-telegram-bot\target\classes started by mohajer13 in D:\My Projecs\GitHub\dzrt-telegram-bot)
+2024-06-18T03:58:48.740+03:30  INFO 10352 --- [main] project.MainApplication                  : No active profile set, falling back to 1 default profile: "default"
+2024-06-18T03:58:49.605+03:30  INFO 10352 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-18T03:58:49.605+03:30  INFO 10352 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-18T03:58:49.647+03:30  INFO 10352 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface project.dao.ProductDao; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-18T03:58:49.649+03:30  INFO 10352 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface project.dao.TokenDao; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-18T03:58:49.651+03:30  INFO 10352 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface project.dao.UserDao; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-18T03:58:49.652+03:30  INFO 10352 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 0 JDBC repository interfaces.
+2024-06-18T03:58:49.666+03:30  INFO 10352 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-18T03:58:49.666+03:30  INFO 10352 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-18T03:58:49.708+03:30  INFO 10352 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 3 JPA repository interfaces.
+2024-06-18T03:58:50.340+03:30  INFO 10352 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2024-06-18T03:58:50.351+03:30  INFO 10352 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-18T03:58:50.351+03:30  INFO 10352 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-06-18T03:58:50.518+03:30  INFO 10352 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-18T03:58:50.518+03:30  INFO 10352 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1695 ms
+2024-06-18T03:58:50.700+03:30  INFO 10352 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-18T03:58:50.763+03:30  INFO 10352 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-06-18T03:58:50.766+03:30  INFO 10352 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-06-18T03:58:51.078+03:30  INFO 10352 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-18T03:58:51.108+03:30  INFO 10352 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-18T03:58:51.526+03:30  INFO 10352 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a9a8ec3
+2024-06-18T03:58:51.529+03:30  INFO 10352 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-18T03:58:52.648+03:30  INFO 10352 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-18T03:58:56.231+03:30  INFO 10352 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18T03:58:56.323+03:30  INFO 10352 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final org.telegram.telegrambots.bots.DefaultBotOptions org.telegram.telegrambots.bots.DefaultAbsSender.getOptions()] because it is marked as final: Consider using interface-based JDK proxies instead!
+2024-06-18T03:58:56.667+03:30  INFO 10352 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-18T03:58:57.045+03:30  WARN 10352 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-18T03:58:57.549+03:30  INFO 10352 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2024-06-18T03:58:58.383+03:30  INFO 10352 --- [main] project.MainApplication                  : Started MainApplication in 10.37 seconds (process running for 11.457)
+2024-06-18T03:59:25.798+03:30  INFO 10352 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'

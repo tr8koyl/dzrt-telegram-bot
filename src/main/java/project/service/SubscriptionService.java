@@ -17,9 +17,7 @@ import project.domain.User;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Period;
-import java.util.List;
-import java.util.Random;
-import java.util.UUID;
+import java.util.*;
 
 @Log4j
 @EnableScheduling
@@ -37,6 +35,9 @@ public class SubscriptionService {
 
     @Autowired
     private UserDao userDao;
+
+    @Autowired
+    private ScrapingService scrapingService;
 
     @Lazy
     @Autowired
@@ -214,8 +215,6 @@ public class SubscriptionService {
      */
     public void start(Update update) {
 
-        telegramBotService.sendReplyKeyboard(update.getMessage().getFrom().getId());
-
         if (!isRegistered(update.getMessage().getFrom().getId())) {
 
             User user = new User();
@@ -234,6 +233,76 @@ public class SubscriptionService {
 
             }
         }
+    }
+
+    @Scheduled(fixedRate = 60000)
+    public void notifySubscribers() {
+
+        List<Product> newProducts = scrapingService.getAllProducts();
+        List<Product> oldProducts = productDao.findAll();
+
+        if (!oldProducts.isEmpty()) {
+
+            Map<String, Boolean> oldProductsMap = new HashMap<>();
+            List<Product> changedAvailability = new ArrayList<>();
+            List<Long> userIdList = tokenDao.allUserIdList();
+            userIdList.removeIf(Objects::isNull);
+
+            for (Product product : oldProducts) {
+                oldProductsMap.put(product.getName(), product.getAvailability());
+            }
+
+            if (newProducts != null){
+
+                for (Product product : newProducts) {
+
+                    Boolean oldStatus = oldProductsMap.get(product.getName());
+                    if (product.getAvailability() != null){
+                        if (oldStatus != null && !oldStatus && product.getAvailability()) {
+                            changedAvailability.add(product);
+                        }
+                    }
+                }
+
+            }
+
+            //todo remove hardcode
+//            if (!userIdList.contains(adminId)) userIdList.add(adminId);
+//            long rayan =749852523;
+//            if (!userIdList.contains(rayan)) userIdList.add(rayan);
+
+            for (Long userId : userIdList) {
+                if (isSubscriber(userId) || userId.equals(adminId)) {
+
+                    for (Product product : changedAvailability) {
+                        telegramBotService.sendTextMessage(String
+                                .format("منتج: %s ✅ متاح الآن ✅\nالرابط: %s "
+                                        , product.getName(), product.getLink()), userId);
+                    }
+                }
+            }
+
+            if (newProducts != null){
+
+                for (Product product : newProducts) {
+                    productDao.updateProductStatus(product);
+                }
+
+            }
+
+        } else {
+
+            if (newProducts != null){
+                productDao.saveAll(newProducts);
+            }
+        }
+
+    }
+
+    @Scheduled(fixedRate = 86400000)
+    public void deletePastMonthTokens() {
+        LocalDate pastMonth = LocalDate.now().minusMonths(1);
+        tokenDao.deleteOldTokens(pastMonth);
     }
 
     public static String generateShortUUID() {
@@ -259,12 +328,6 @@ public class SubscriptionService {
 
     public boolean isRegistered(long userId) {
         return userDao.isRegistered(userId) > 0;
-    }
-
-    @Scheduled(fixedRate = 86400000)
-    public void deletePastMonthTokens() {
-        LocalDate pastMonth = LocalDate.now().minusMonths(1);
-        tokenDao.deleteOldTokens(pastMonth);
     }
 
 }
