@@ -69,6 +69,8 @@ public class SubscriptionService {
     //start
     public void start(Update update) {
 
+        telegramBotService.sendReplyKeyboard(update.getMessage().getChatId());
+
         if (!isRegistered(update.getMessage().getFrom().getId())) {
 
             User user = new User();
@@ -83,7 +85,7 @@ public class SubscriptionService {
 
             if (!isAdmin(update)) {
                 telegramBotService.sendTextMessage("للاشتراك وتلقي التنبيهات، يرجى أرسل رسالة إلى هذا الحساب\n @admin"
-                        ,update.getMessage().getFrom().getId());
+                        , update.getMessage().getFrom().getId());
 
             }
         }
@@ -96,7 +98,7 @@ public class SubscriptionService {
 
         if (isAdmin(update)) {
             telegramBotService.sendTextMessage("أنت ادمین ولا تحتاج للاشتراک", userId);
-        } else  {
+        } else {
             telegramBotService.sendTextMessage("للاشتراك وتلقي التنبيهات، يرجى أرسل رسالة إلى هذا الحساب\n @admin", userId);
         }
     }
@@ -122,16 +124,16 @@ public class SubscriptionService {
             if (!isAdmin(update)) {
                 telegramBotService.sendTextMessage("يرجى التسجيل أولاً", update.getMessage().getFrom().getId());
                 telegramBotService.sendTextMessage("للاشتراك وتلقي التنبيهات، يرجى أرسل رسالة إلى هذا الحساب\n @admin"
-                        ,update.getMessage().getFrom().getId());
+                        , update.getMessage().getFrom().getId());
             }
         }
 
         //todo remove hardcode
-        if ((isAdmin(update)) || (isSubscriber(update.getMessage().getFrom().getId())) || update.getMessage().getFrom().getId().equals(749852523) ) {
+        if ((isAdmin(update)) || (isSubscriber(update.getMessage().getFrom().getId())) || update.getMessage().getFrom().getId().equals(749852523)) {
 
             List<Product> productList = productDao.findAll();
 
-            if (productList != null){
+            if (productList != null) {
 
                 for (Product product : productList) {
 
@@ -142,8 +144,8 @@ public class SubscriptionService {
                             .format("المنتج: %s \n" +
                                             "توفر: %s \n" +
                                             "رابط:\n %s \n"
-                                    , product.getName(), ((product.getAvailability() !=null) && product.getAvailability())?
-                                            "متوفر الان✅":"غير متوفر ❌", product.getLink()));
+                                    , product.getName(), ((product.getAvailability() != null) && product.getAvailability()) ?
+                                            "متوفر الان✅" : "غير متوفر ❌", product.getLink()));
 
                     telegramBotService.sendTextMessage(productMessage, update.getMessage().getFrom().getId());
                 }
@@ -225,28 +227,25 @@ public class SubscriptionService {
 
         List<Product> newProducts = scrapingService.getAllProducts();
         List<Product> oldProducts = productDao.findAll();
-        Map<String, Boolean> oldProductsMap = new HashMap<>();
         List<Product> changedAvailability = new ArrayList<>();
+        Map<String, Boolean> oldProductsMap = new HashMap<>();
+
+        if (newProducts == null) return;
 
         if (!oldProducts.isEmpty()) {
 
             oldProducts.forEach(product -> oldProductsMap.put(product.getName(), product.getAvailability()));
 
-            if (newProducts != null){
+            for (Product product : newProducts) {
+                Boolean oldStatus = oldProductsMap.get(product.getName());
+                Boolean newAvailability = product.getAvailability();
 
-                for (Product product : newProducts) {
-
-                    Boolean oldStatus = oldProductsMap.get(product.getName());
-                    if (product.getAvailability() != null){
-                        if (oldStatus != null && !oldStatus && product.getAvailability()) {
-                            changedAvailability.add(product);
-                        }
-                    }
+                if (newAvailability != null && oldStatus != null && !oldStatus && newAvailability) {
+                    changedAvailability.add(product);
                 }
-
             }
 
-            if (!changedAvailability.isEmpty()){
+            if (!changedAvailability.isEmpty()) {
 
                 List<Long> userIdList = tokenDao.allUserIdList()
                         .stream()
@@ -254,9 +253,9 @@ public class SubscriptionService {
                         .collect(Collectors.toList());
 
                 //todo remove hardcode
-            if (!userIdList.contains(adminId)) userIdList.add(adminId);
-//            long rayan =749852523;
-//            if (!userIdList.contains(rayan)) userIdList.add(rayan);
+                if (!userIdList.contains(adminId)) userIdList.add(adminId);
+                //            long rayan =749852523;
+                //            if (!userIdList.contains(rayan)) userIdList.add(rayan);
 
                 for (Long userId : userIdList) {
                     if (isSubscriber(userId) || userId.equals(adminId)) {
@@ -271,10 +270,10 @@ public class SubscriptionService {
 
             }
 
-            if (newProducts != null) newProducts.forEach(productDao::updateProductStatus);
+            newProducts.forEach(productDao::updateProductStatus);
 
         } else {
-            Optional.ofNullable(newProducts).ifPresent(productDao::saveAll);
+            Optional.of(newProducts).ifPresent(productDao::saveAll);
         }
 
     }

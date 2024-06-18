@@ -47,7 +47,7 @@ public class TelegramBotService extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(Update update) {
 
-        if (update.hasMessage()) sendReplyKeyboard(update.getMessage().getChatId());
+//        if (update.hasMessage()) sendReplyKeyboard(update.getMessage().getChatId());
         subscriptionService.onUpdateReceived(update);
 
     }
