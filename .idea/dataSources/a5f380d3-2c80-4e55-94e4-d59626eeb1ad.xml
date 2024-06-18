@@ -937,65 +937,92 @@ dzrt_db|schema||dzrt|localhost|UPDATE|G</Grants>
     <user id="291" parent="1" name="dzrt">
       <Host>localhost</Host>
     </user>
-    <table id="292" parent="288" name="product_tb_seq"/>
-    <table id="293" parent="288" name="token_tb"/>
-    <table id="294" parent="288" name="token_tb_seq"/>
-    <table id="295" parent="288" name="user_tb"/>
-    <table id="296" parent="288" name="user_tb_seq"/>
-    <column id="297" parent="292" name="next_val">
-      <DataType>bigint|0s</DataType>
+    <table id="292" parent="288" name="product_tb"/>
+    <table id="293" parent="288" name="product_tb_seq"/>
+    <table id="294" parent="288" name="token_tb"/>
+    <table id="295" parent="288" name="token_tb_seq"/>
+    <table id="296" parent="288" name="user_tb"/>
+    <table id="297" parent="288" name="user_tb_seq"/>
+    <column id="298" parent="292" name="availability">
+      <DataType>bit(1)|0s</DataType>
       <Position>1</Position>
     </column>
-    <column id="298" parent="293" name="expiration_date">
-      <DataType>date|0s</DataType>
-      <Position>1</Position>
-    </column>
-    <column id="299" parent="293" name="generation_date">
-      <DataType>date|0s</DataType>
-      <Position>2</Position>
-    </column>
-    <column id="300" parent="293" name="id">
+    <column id="299" parent="292" name="id">
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="300" parent="292" name="last_update_time">
+      <DataType>datetime(6)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="301" parent="293" name="related_user_id">
-      <DataType>bigint|0s</DataType>
+    <column id="301" parent="292" name="link">
+      <DataType>varchar(255)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="302" parent="293" name="token_code">
+    <column id="302" parent="292" name="name">
       <DataType>varchar(255)|0s</DataType>
       <Position>5</Position>
     </column>
-    <key id="303" parent="293" name="PRIMARY">
+    <key id="303" parent="292" name="PRIMARY">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="304" parent="294" name="next_val">
+    <column id="304" parent="293" name="next_val">
       <DataType>bigint|0s</DataType>
       <Position>1</Position>
     </column>
-    <column id="305" parent="295" name="id">
-      <DataType>bigint|0s</DataType>
-      <NotNull>1</NotNull>
+    <column id="305" parent="294" name="expiration_date">
+      <DataType>date|0s</DataType>
       <Position>1</Position>
     </column>
-    <column id="306" parent="295" name="registration_date">
-      <DataType>datetime(6)|0s</DataType>
+    <column id="306" parent="294" name="generation_date">
+      <DataType>date|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="307" parent="295" name="user_id">
+    <column id="307" parent="294" name="id">
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <key id="308" parent="295" name="PRIMARY">
+    <column id="308" parent="294" name="related_user_id">
+      <DataType>bigint|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="309" parent="294" name="token_code">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <key id="310" parent="294" name="PRIMARY">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="309" parent="296" name="next_val">
+    <column id="311" parent="295" name="next_val">
+      <DataType>bigint|0s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="312" parent="296" name="id">
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="313" parent="296" name="registration_date">
+      <DataType>datetime(6)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="314" parent="296" name="user_id">
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <key id="315" parent="296" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="316" parent="297" name="next_val">
       <DataType>bigint|0s</DataType>
       <Position>1</Position>
     </column>

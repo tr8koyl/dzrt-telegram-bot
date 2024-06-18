@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d7bb72b-696f-451b-a6a1-84bf85bdcacb" name="Changes" comment="Mantegh sahih" />
+    <list default="true" id="9d7bb72b-696f-451b-a6a1-84bf85bdcacb" name="Changes" comment="Mantegh sahih - reform codes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/service/ScrapingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/service/ScrapingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/service/SubscriptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/service/SubscriptionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/service/ScrapingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/service/ScrapingService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/service/SubscriptionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/service/SubscriptionService.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1718660201552</updated>
       <workItem from="1718660203194" duration="5449000" />
-      <workItem from="1718665719296" duration="5478000" />
+      <workItem from="1718665719296" duration="6907000" />
     </task>
     <task id="LOCAL-00001" summary="add ptoject">
       <created>1718660234452</created>
@@ -119,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718671645723</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Mantegh sahih - reform codes">
+      <created>1718672101676</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1718672101676</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +157,7 @@
     <MESSAGE value="reform mantegh sahih bi error" />
     <MESSAGE value="backup version! Mantegh-Sahih Full" />
     <MESSAGE value="Mantegh sahih" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mantegh sahih" />
+    <MESSAGE value="Mantegh sahih - reform codes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mantegh sahih - reform codes" />
   </component>
 </project>

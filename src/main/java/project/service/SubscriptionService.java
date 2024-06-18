@@ -18,6 +18,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Period;
 import java.util.*;
+import java.util.stream.Collectors;
 
 @Log4j
 @EnableScheduling
@@ -219,23 +220,17 @@ public class SubscriptionService {
 
     }
 
-
     @Scheduled(fixedRate = 60000)
     public void notifySubscribers() {
 
         List<Product> newProducts = scrapingService.getAllProducts();
         List<Product> oldProducts = productDao.findAll();
+        Map<String, Boolean> oldProductsMap = new HashMap<>();
+        List<Product> changedAvailability = new ArrayList<>();
 
         if (!oldProducts.isEmpty()) {
 
-            Map<String, Boolean> oldProductsMap = new HashMap<>();
-            List<Product> changedAvailability = new ArrayList<>();
-            List<Long> userIdList = tokenDao.allUserIdList();
-            userIdList.removeIf(Objects::isNull);
-
-            for (Product product : oldProducts) {
-                oldProductsMap.put(product.getName(), product.getAvailability());
-            }
+            oldProducts.forEach(product -> oldProductsMap.put(product.getName(), product.getAvailability()));
 
             if (newProducts != null){
 
@@ -251,35 +246,35 @@ public class SubscriptionService {
 
             }
 
-            //todo remove hardcode
-//            if (!userIdList.contains(adminId)) userIdList.add(adminId);
+            if (!changedAvailability.isEmpty()){
+
+                List<Long> userIdList = tokenDao.allUserIdList()
+                        .stream()
+                        .filter(Objects::nonNull)
+                        .collect(Collectors.toList());
+
+                //todo remove hardcode
+            if (!userIdList.contains(adminId)) userIdList.add(adminId);
 //            long rayan =749852523;
 //            if (!userIdList.contains(rayan)) userIdList.add(rayan);
 
-            for (Long userId : userIdList) {
-                if (isSubscriber(userId) || userId.equals(adminId)) {
+                for (Long userId : userIdList) {
+                    if (isSubscriber(userId) || userId.equals(adminId)) {
 
-                    for (Product product : changedAvailability) {
-                        telegramBotService.sendTextMessage(String
-                                .format("منتج: %s ✅ متاح الآن ✅\nالرابط: %s "
-                                        , product.getName(), product.getLink()), userId);
+                        for (Product product : changedAvailability) {
+                            telegramBotService.sendTextMessage(String
+                                    .format("منتج: %s ✅ متاح الآن ✅\nالرابط: %s "
+                                            , product.getName(), product.getLink()), userId);
+                        }
                     }
                 }
-            }
-
-            if (newProducts != null){
-
-                for (Product product : newProducts) {
-                    productDao.updateProductStatus(product);
-                }
 
             }
+
+            if (newProducts != null) newProducts.forEach(productDao::updateProductStatus);
 
         } else {
-
-            if (newProducts != null){
-                productDao.saveAll(newProducts);
-            }
+            Optional.ofNullable(newProducts).ifPresent(productDao::saveAll);
         }
 
     }
