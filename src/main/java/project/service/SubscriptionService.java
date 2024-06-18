@@ -48,16 +48,14 @@ public class SubscriptionService {
         if (update.hasMessage() && update.getMessage().hasText()) {
             String text = update.getMessage().getText();
 
-            /**
-             * commands
-             */
+            //commands
             switch (text) {
+                case "/start" -> start(update);
+                case "الاشتراک" -> registerSub(update);
+                case "تاريخ تسجيلي" -> sendUserRegistrationDate(update);
+                case "التحقق من توفر المنتجات" -> newsAllProducts(update);
                 case "/newtoken" -> adminGenerateNewToken(update);
                 case "/allsubscribers" -> allSubscribers(update);
-                case "الاشتراک" -> registerSub(update);
-                case "التحقق من توفر المنتجات" -> newsAllProducts(update);
-                case "تاريخ تسجيلي" -> sendUserRegistrationDate(update);
-                case "/start" -> start(update);
                 default -> {
                     if (text.startsWith("tk-")) {
                         getToken(update);
@@ -67,27 +65,30 @@ public class SubscriptionService {
         }
     }
 
-    /**
-     * newtoken
-     */
-    public void adminGenerateNewToken(Update update) {
+    //start
+    public void start(Update update) {
 
-        if (isAdmin(update)) {
-            Token token = new Token();
-            String tokenCode = "tk-".concat(generateShortUUID());
-            token.setId(new Random().nextLong());
-            token.setTokenCode(tokenCode);
-            token.setGenerationDate(LocalDate.now());
-            token.setExpirationDate(LocalDate.now().plus(Period.ofMonths(1)));
-            token.setRelatedUserId(null);
-            tokenDao.save(token);
-            telegramBotService.sendTextMessage(tokenCode, adminId);
+        if (!isRegistered(update.getMessage().getFrom().getId())) {
+
+            User user = new User();
+            user.setId(new Random().nextLong());
+            user.setUserId(update.getMessage().getFrom().getId());
+            user.setRegistrationDate(LocalDateTime.now());
+            userDao.save(user);
+
+            if (isAdmin(update)) {
+                telegramBotService.sendTextMessage("أنت ادمین ولا تحتاج للاشتراک", adminId);
+            }
+
+            if (!isAdmin(update)) {
+                telegramBotService.sendTextMessage("للاشتراك وتلقي التنبيهات، يرجى أرسل رسالة إلى هذا الحساب\n @admin"
+                        ,update.getMessage().getFrom().getId());
+
+            }
         }
     }
 
-    /**
-     * subscription
-     */
+    //الاشتراک
     public void registerSub(Update update) {
 
         long userId = update.getMessage().getFrom().getId();
@@ -99,47 +100,21 @@ public class SubscriptionService {
         }
     }
 
-    /**
-     * getToken
-     */
-    public void getToken(Update update) {
+    //تاريخ تسجيلي
+    public void sendUserRegistrationDate(Update update) {
 
-        long userId = update.getMessage().getFrom().getId();
-
-        if (isValidToken(update.getMessage().getText())) {
-
-            Token token = tokenDao.findTokenByTokenCode(update.getMessage().getText());
-
-            if (token.getRelatedUserId() != null) {
-
-                if (token.getRelatedUserId() == userId) {
-
-                    telegramBotService.sendTextMessage("هذا الرمز هو لك", userId);
-                }
-            } else {
-                if ((token.getRelatedUserId() == null) && (!isAdmin(update))) {
-                    if (!isSubscriber(userId)) {
-                        token.setRelatedUserId(userId);
-                    }
-                }
-            }
-            tokenDao.updateToken(token);
-
-            if (isAdmin(update) || userId == token.getRelatedUserId()) {
-                telegramBotService.sendTextMessage("تاريخ انتهاء الاشتراك: \n"
-                        .concat(token.getExpirationDate().toString()), userId);
-            }
-
-        } else if (!isValidToken(update.getMessage().getText())) {
-            telegramBotService.sendTextMessage("لم يتم العثور على معرفك في قاعدة البيانات. يرجى التسجيل أولاً.", userId);
-            telegramBotService.sendTextMessage("للاشتراك وتلقي التنبيهات، يرجى أرسل رسالة إلى هذا الحساب\n @admin", userId);
+        LocalDateTime date = getUserRegistrationDate(update);
+        if (date != null) {
+            telegramBotService.sendTextMessage("لقد قمت بالتسجيل في الروبوت في:\n "
+                            .concat(date.toString().substring(0, 19))
+                    , update.getMessage().getFrom().getId());
+        } else if (date == null) {
+            telegramBotService.sendTextMessage("خطأ، الرجاء إعادة تشغيل البوت"
+                    , update.getMessage().getFrom().getId());
         }
-
     }
 
-    /**
-     * newsallproducts
-     */
+    //التحقق من توفر المنتجات
     public void newsAllProducts(Update update) {
 
         if ((!isSubscriber(update.getMessage().getFrom().getId()))) {
@@ -178,25 +153,23 @@ public class SubscriptionService {
 
     }
 
-    /**
-     * sendUserRegistrationDate
-     */
-    public void sendUserRegistrationDate(Update update) {
+    //newtoken
+    public void adminGenerateNewToken(Update update) {
 
-        LocalDateTime date = getUserRegistrationDate(update);
-        if (date != null) {
-            telegramBotService.sendTextMessage("لقد قمت بالتسجيل في الروبوت في:\n "
-                            .concat(date.toString().substring(0, 19))
-                    , update.getMessage().getFrom().getId());
-        } else if (date == null) {
-            telegramBotService.sendTextMessage("خطأ، الرجاء إعادة تشغيل البوت"
-                    , update.getMessage().getFrom().getId());
+        if (isAdmin(update)) {
+            Token token = new Token();
+            String tokenCode = "tk-".concat(generateShortUUID());
+            token.setId(new Random().nextLong());
+            token.setTokenCode(tokenCode);
+            token.setGenerationDate(LocalDate.now());
+            token.setExpirationDate(LocalDate.now().plus(Period.ofMonths(1)));
+            token.setRelatedUserId(null);
+            tokenDao.save(token);
+            telegramBotService.sendTextMessage(tokenCode, adminId);
         }
     }
 
-    /**
-     * allSubscribers
-     */
+    //allSubscribers
     public void allSubscribers(Update update) {
 
         if (isAdmin(update)) {
@@ -210,30 +183,42 @@ public class SubscriptionService {
 
     }
 
-    /**
-     * start
-     */
-    public void start(Update update) {
+    //tk-
+    public void getToken(Update update) {
 
-        if (!isRegistered(update.getMessage().getFrom().getId())) {
+        long userId = update.getMessage().getFrom().getId();
 
-            User user = new User();
-            user.setId(new Random().nextLong());
-            user.setUserId(update.getMessage().getFrom().getId());
-            user.setRegistrationDate(LocalDateTime.now());
-            userDao.save(user);
+        if (isValidToken(update.getMessage().getText())) {
 
-            if (isAdmin(update)) {
-                telegramBotService.sendTextMessage("أنت ادمین ولا تحتاج للاشتراک", adminId);
+            Token token = tokenDao.findTokenByTokenCode(update.getMessage().getText());
+
+            if (token.getRelatedUserId() != null) {
+
+                if (token.getRelatedUserId() == userId) {
+
+                    telegramBotService.sendTextMessage("هذا الرمز هو لك", userId);
+                }
+            } else {
+                if ((token.getRelatedUserId() == null) && (!isAdmin(update))) {
+                    if (!isSubscriber(userId)) {
+                        token.setRelatedUserId(userId);
+                    }
+                }
+            }
+            tokenDao.updateToken(token);
+
+            if (isAdmin(update) || userId == token.getRelatedUserId()) {
+                telegramBotService.sendTextMessage("تاريخ انتهاء الاشتراك: \n"
+                        .concat(token.getExpirationDate().toString()), userId);
             }
 
-            if (!isAdmin(update)) {
-                telegramBotService.sendTextMessage("للاشتراك وتلقي التنبيهات، يرجى أرسل رسالة إلى هذا الحساب\n @admin"
-                        ,update.getMessage().getFrom().getId());
-
-            }
+        } else if (!isValidToken(update.getMessage().getText())) {
+            telegramBotService.sendTextMessage("لم يتم العثور على معرفك في قاعدة البيانات. يرجى التسجيل أولاً.", userId);
+            telegramBotService.sendTextMessage("للاشتراك وتلقي التنبيهات، يرجى أرسل رسالة إلى هذا الحساب\n @admin", userId);
         }
+
     }
+
 
     @Scheduled(fixedRate = 60000)
     public void notifySubscribers() {

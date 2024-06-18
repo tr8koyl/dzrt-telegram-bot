@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d7bb72b-696f-451b-a6a1-84bf85bdcacb" name="Changes" comment="backup version! Mantegh-Sahih Full">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dzrtlog.log" beforeDir="false" afterPath="$PROJECT_DIR$/dzrtlog.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/service/SubscriptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/service/SubscriptionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/service/TelegramBotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/service/TelegramBotService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/MainApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/MainApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/service/ScrapingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/service/ScrapingService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/service/SubscriptionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/service/SubscriptionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/service/TelegramBotService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/service/TelegramBotService.class" afterDir="false" />
-    </list>
+    <list default="true" id="9d7bb72b-696f-451b-a6a1-84bf85bdcacb" name="Changes" comment="Mantegh sahih" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1718660201552</updated>
       <workItem from="1718660203194" duration="5449000" />
-      <workItem from="1718665719296" duration="4930000" />
+      <workItem from="1718665719296" duration="5478000" />
     </task>
     <task id="LOCAL-00001" summary="add ptoject">
       <created>1718660234452</created>
@@ -121,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718670219581</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Mantegh sahih">
+      <created>1718671645723</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718671645723</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +143,7 @@
     <MESSAGE value="get all products list" />
     <MESSAGE value="reform mantegh sahih bi error" />
     <MESSAGE value="backup version! Mantegh-Sahih Full" />
-    <option name="LAST_COMMIT_MESSAGE" value="backup version! Mantegh-Sahih Full" />
+    <MESSAGE value="Mantegh sahih" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mantegh sahih" />
   </component>
 </project>
