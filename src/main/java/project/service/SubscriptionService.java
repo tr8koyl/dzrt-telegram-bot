@@ -1,6 +1,5 @@
 package project.service;
 
-import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Lazy;
@@ -20,7 +19,6 @@ import java.time.Period;
 import java.util.*;
 import java.util.stream.Collectors;
 
-@Log4j
 @EnableScheduling
 @Service
 public class SubscriptionService {
@@ -84,8 +82,7 @@ public class SubscriptionService {
             }
 
             if (!isAdmin(update)) {
-                telegramBotService.sendTextMessage("للاشتراك وتلقي التنبيهات، يرجى أرسل رسالة إلى هذا الحساب\n @admin"
-                        , update.getMessage().getFrom().getId());
+                telegramBotService.sendTextMessage("للاشتراك وتلقي التنبيهات، يرجى أرسل رسالة إلى هذا الحساب\n @admin", update.getMessage().getFrom().getId());
 
             }
         }
@@ -108,12 +105,9 @@ public class SubscriptionService {
 
         LocalDateTime date = getUserRegistrationDate(update);
         if (date != null) {
-            telegramBotService.sendTextMessage("لقد قمت بالتسجيل في الروبوت في:\n "
-                            .concat(date.toString().substring(0, 19))
-                    , update.getMessage().getFrom().getId());
+            telegramBotService.sendTextMessage("لقد قمت بالتسجيل في الروبوت في:\n ".concat(date.toString().substring(0, 19)), update.getMessage().getFrom().getId());
         } else if (date == null) {
-            telegramBotService.sendTextMessage("خطأ، الرجاء إعادة تشغيل البوت"
-                    , update.getMessage().getFrom().getId());
+            telegramBotService.sendTextMessage("خطأ، الرجاء إعادة تشغيل البوت", update.getMessage().getFrom().getId());
         }
     }
 
@@ -123,13 +117,11 @@ public class SubscriptionService {
         if ((!isSubscriber(update.getMessage().getFrom().getId()))) {
             if (!isAdmin(update)) {
                 telegramBotService.sendTextMessage("يرجى التسجيل أولاً", update.getMessage().getFrom().getId());
-                telegramBotService.sendTextMessage("للاشتراك وتلقي التنبيهات، يرجى أرسل رسالة إلى هذا الحساب\n @admin"
-                        , update.getMessage().getFrom().getId());
+                telegramBotService.sendTextMessage("للاشتراك وتلقي التنبيهات، يرجى أرسل رسالة إلى هذا الحساب\n @admin", update.getMessage().getFrom().getId());
             }
         }
 
-        //todo remove hardcode
-        if ((isAdmin(update)) || (isSubscriber(update.getMessage().getFrom().getId())) || update.getMessage().getFrom().getId().equals(749852523)) {
+        if ((isAdmin(update)) || (isSubscriber(update.getMessage().getFrom().getId()))) {
 
             List<Product> productList = productDao.findAll();
 
@@ -140,12 +132,7 @@ public class SubscriptionService {
                     String productMessage = "";
 
 
-                    productMessage = productMessage.concat(String
-                            .format("المنتج: %s \n" +
-                                            "توفر: %s \n" +
-                                            "رابط:\n %s \n"
-                                    , product.getName(), ((product.getAvailability() != null) && product.getAvailability()) ?
-                                            "متوفر الان✅" : "غير متوفر ❌", product.getLink()));
+                    productMessage = productMessage.concat(String.format("المنتج: %s \n" + "توفر: %s \n" + "رابط:\n %s \n", product.getName(), ((product.getAvailability() != null) && product.getAvailability()) ? "متوفر الان✅" : "غير متوفر ❌", product.getLink()));
 
                     telegramBotService.sendTextMessage(productMessage, update.getMessage().getFrom().getId());
                 }
@@ -177,7 +164,7 @@ public class SubscriptionService {
 
         if (isAdmin(update)) {
 
-            Integer allSubscribers = tokenDao.allSubscribers();
+            Integer allSubscribers = tokenDao.countSubscribers();
 
             String log = String.format("نوجد: %s مشتركين", allSubscribers.toString());
 
@@ -211,8 +198,7 @@ public class SubscriptionService {
             tokenDao.updateToken(token);
 
             if (isAdmin(update) || userId == token.getRelatedUserId()) {
-                telegramBotService.sendTextMessage("تاريخ انتهاء الاشتراك: \n"
-                        .concat(token.getExpirationDate().toString()), userId);
+                telegramBotService.sendTextMessage("تاريخ انتهاء الاشتراك: \n".concat(token.getExpirationDate().toString()), userId);
             }
 
         } else if (!isValidToken(update.getMessage().getText())) {
@@ -227,54 +213,30 @@ public class SubscriptionService {
 
         List<Product> newProducts = scrapingService.getAllProducts();
         List<Product> oldProducts = productDao.findAll();
-        List<Product> changedAvailability = new ArrayList<>();
-        Map<String, Boolean> oldProductsMap = new HashMap<>();
+        Map<String, Boolean> oldProductsMap = oldProducts.stream().collect(Collectors.toMap(Product::getName, Product::getAvailability));
 
-        if (newProducts == null) return;
+        List<Product> changedAvailability = newProducts.stream().filter(product -> {
+            Boolean oldAvailability = oldProductsMap.get(product.getName());
+            Boolean newAvailability = product.getAvailability();
+            return newAvailability != null && oldAvailability != null && !oldAvailability && newAvailability;
+        }).toList();
 
-        if (!oldProducts.isEmpty()) {
+        if (!changedAvailability.isEmpty()) {
 
-            oldProducts.forEach(product -> oldProductsMap.put(product.getName(), product.getAvailability()));
+            Set<Long> subscribersIdList = new HashSet<>(tokenDao.allSubscribers());
+            subscribersIdList.add(adminId);
+            String messageTemplate = "منتج: %s متوفر الآن ✅\nالرابط: %s ";
 
-            for (Product product : newProducts) {
-                Boolean oldStatus = oldProductsMap.get(product.getName());
-                Boolean newAvailability = product.getAvailability();
-
-                if (newAvailability != null && oldStatus != null && !oldStatus && newAvailability) {
-                    changedAvailability.add(product);
-                }
-            }
-
-            if (!changedAvailability.isEmpty()) {
-
-                List<Long> userIdList = tokenDao.allUserIdList()
-                        .stream()
-                        .filter(Objects::nonNull)
-                        .collect(Collectors.toList());
-
-                //todo remove hardcode
-                if (!userIdList.contains(adminId)) userIdList.add(adminId);
-                //            long rayan =749852523;
-                //            if (!userIdList.contains(rayan)) userIdList.add(rayan);
-
-                for (Long userId : userIdList) {
-                    if (isSubscriber(userId) || userId.equals(adminId)) {
-
-                        for (Product product : changedAvailability) {
-                            telegramBotService.sendTextMessage(String
-                                    .format("منتج: %s ✅ متاح الآن ✅\nالرابط: %s "
-                                            , product.getName(), product.getLink()), userId);
-                        }
-                    }
-                }
-
-            }
-
-            newProducts.forEach(productDao::updateProductStatus);
-
-        } else {
-            Optional.of(newProducts).ifPresent(productDao::saveAll);
+            changedAvailability.forEach(product -> {
+                String message = String.format(messageTemplate, product.getName(), product.getLink());
+                subscribersIdList.forEach(userId -> {
+                    telegramBotService.sendTextMessage(message, userId);
+                });
+            });
         }
+
+        productDao.deleteAllInBatch();
+        productDao.saveAll(newProducts);
 
     }
 

@@ -24,7 +24,6 @@ import java.util.List;
 
 @Data
 @Service
-@Log4j
 public class TelegramBotService extends TelegramLongPollingBot {
 
     @Lazy
@@ -47,7 +46,6 @@ public class TelegramBotService extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(Update update) {
 
-//        if (update.hasMessage()) sendReplyKeyboard(update.getMessage().getChatId());
         subscriptionService.onUpdateReceived(update);
 
     }
@@ -61,7 +59,7 @@ public class TelegramBotService extends TelegramLongPollingBot {
         try {
             execute(sendMessage);
         } catch (Exception e) {
-            log.error("Error occurred: " + e.getMessage());
+            System.out.println("Error occurred: " + e.getMessage());
         }
 
     }
@@ -89,7 +87,7 @@ public class TelegramBotService extends TelegramLongPollingBot {
         try {
             execute(message);
         } catch (Exception e) {
-            log.error("Error occurred: " + e.getMessage());
+            System.out.println("Error occurred: " + e.getMessage());
         }
 
     }

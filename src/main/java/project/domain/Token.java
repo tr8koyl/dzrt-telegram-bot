@@ -8,7 +8,7 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 @Entity
-@Table(schema = "dzrt_db", name = "token_tb")
+@Table(name = "token_tb")
 public class Token {
 
     @Id

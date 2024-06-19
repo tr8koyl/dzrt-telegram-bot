@@ -1,6 +1,5 @@
 package project.service;
 
-import lombok.extern.log4j.Log4j;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -8,13 +7,10 @@ import org.jsoup.select.Elements;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Component;
 import project.domain.Product;
-
-import java.io.File;
 import java.time.LocalDateTime;
 import java.util.*;
 
 @EnableScheduling
-@Log4j
 @Component
 public class ScrapingService {
 
@@ -34,7 +30,7 @@ public class ScrapingService {
             }
 
         } catch (Exception e) {
-            log.error("An unexpected error occurred: " + e.getMessage(), e);
+            System.out.println("An unexpected error occurred: " + e.getMessage());
         }
         return products;
     }

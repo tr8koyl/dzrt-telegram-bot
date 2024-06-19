@@ -31,7 +31,10 @@ public interface TokenDao extends JpaRepository<Token, Long> {
     int isSubscriber(long userId);
 
     @Query(value = "SELECT COUNT(*) FROM token_tb WHERE related_user_id IS NOT NULL",nativeQuery = true)
-    Integer allSubscribers();
+    Integer countSubscribers();
+
+    @Query(value = "SELECT user_id FROM token_tb;", nativeQuery = true)
+    List<Long> allSubscribers();
 
     @Query(value = "SELECT related_user_id FROM token_tb;",nativeQuery = true)
     List<Long> allUserIdList();

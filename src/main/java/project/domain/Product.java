@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(schema = "dzrt_db", name = "product_tb")
+@Table(name = "product_tb")
 public class Product {
 
     @Id

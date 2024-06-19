@@ -10,10 +10,10 @@ bot_info:
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/dzrt_db
-    driverClassName: com.mysql.cj.jdbc.Driver
-    username: dzrt
-    password: 123654
+    url: jdbc:h2:file:./dzrt_file
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
   jpa:
     properties:
       hibernate:
