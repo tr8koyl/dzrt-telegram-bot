@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d7bb72b-696f-451b-a6a1-84bf85bdcacb" name="Changes" comment="add git ignore">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a5f380d3-2c80-4e55-94e4-d59626eeb1ad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a5f380d3-2c80-4e55-94e4-d59626eeb1ad.xml" afterDir="false" />
+    <list default="true" id="9d7bb72b-696f-451b-a6a1-84bf85bdcacb" name="Changes" comment="final- no memory leak.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/dao/ProductDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/dao/TokenDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/dao/TokenDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/domain/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/domain/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/domain/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/domain/Token.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/domain/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/service/ScrapingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/service/ScrapingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/service/SubscriptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/service/SubscriptionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/service/TelegramBotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/service/TelegramBotService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

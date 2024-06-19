@@ -4,13 +4,11 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Component;
 import project.domain.Product;
 import java.time.LocalDateTime;
 import java.util.*;
 
-@EnableScheduling
 @Component
 public class ScrapingService {
 

@@ -4,6 +4,7 @@ import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import project.domain.Token;
 import java.time.LocalDate;
@@ -33,7 +34,7 @@ public interface TokenDao extends JpaRepository<Token, Long> {
     @Query(value = "SELECT COUNT(*) FROM token_tb WHERE related_user_id IS NOT NULL",nativeQuery = true)
     Integer countSubscribers();
 
-    @Query(value = "SELECT user_id FROM token_tb;", nativeQuery = true)
+    @Query(value = "SELECT related_user_id FROM token_tb;", nativeQuery = true)
     List<Long> allSubscribers();
 
     @Query(value = "SELECT related_user_id FROM token_tb;",nativeQuery = true)
@@ -42,5 +43,5 @@ public interface TokenDao extends JpaRepository<Token, Long> {
     @Modifying
     @Transactional
     @Query(value = "DELETE FROM token_tb WHERE generation_date < :pastMonth", nativeQuery = true )
-    void deleteOldTokens(LocalDate pastMonth);
+    void deleteOldTokens(@Param("pastMonth") LocalDate pastMonth);
 }

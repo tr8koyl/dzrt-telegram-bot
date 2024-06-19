@@ -10,17 +10,18 @@ bot_info:
 
 spring:
   datasource:
-    url: jdbc:h2:file:./dzrt_file
+    url: jdbc:h2:file:./dzrt_file;DB_CLOSE_ON_EXIT=FALSE
     driverClassName: org.h2.Driver
-    username: sa
-    password: ''
+    username: dzrt
+    password: 123654
   jpa:
     properties:
       hibernate:
-        dialec: org.hibernate.dialect.MySQL8Dialect
+        dialec: org.hibernate.dialect.H2Dialect
         format_sql: true
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.H2Dialect
 
 logging:
   level:
