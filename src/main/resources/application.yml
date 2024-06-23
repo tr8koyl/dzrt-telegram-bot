@@ -1,9 +1,9 @@
 server.port: 8081
 
 bot_info:
-  token: "7274804788:AAHNUjwKKYw9RoZ4ULa8J_TP0umz5pQ0Z_g"
-  username: "testdzrtbot"
-  adminId: 59566445
+  token: "6887561344:AAHKTK9FoMyO7zEB6YZqyR6MjQmhywG2wjc"
+  username: "DzrtNewsBot"
+  adminId: 748766984
 #  token: "6954677787:AAFvNjORwrOZ8ZuuGPvrPatzTb1Q11hMIdU"
 #  username: "mohajer13bot"
 #  adminId: 59566445
